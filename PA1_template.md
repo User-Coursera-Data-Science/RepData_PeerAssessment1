@@ -44,7 +44,7 @@ steps_per_interval <- aggregate(steps ~ interval, activity, mean, na.rm=T)
 with(steps_per_interval, plot(interval, steps, type="l", xlab="5- min Intervals", ylab="Avg steps across all days", main = "Average daily activity pattern"))
 ```
 
-![](PA1_template_files/figure-html/time series-1.png)<!-- -->
+![](PA1_template_files/figure-html/time_series-1.png)<!-- -->
 
 
 ```r
@@ -116,5 +116,5 @@ library(lattice)
 xyplot(steps_per_interval_wd$steps ~ steps_per_interval_wd$interval|steps_per_interval_wd$wd, main="Average Steps per Day by Interval",xlab="5-min Interval", ylab="Avg steps",layout=c(1,2), type="l")
 ```
 
-![](PA1_template_files/figure-html/panel plots-1.png)<!-- -->
+![](PA1_template_files/figure-html/panel_plots-1.png)<!-- -->
 

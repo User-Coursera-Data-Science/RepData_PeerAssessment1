@@ -39,7 +39,7 @@ The **mean number** of steps is `r mean_steps` and the **median** is `r median_s
 
 ## What is the average daily activity pattern?
 
-```{r time series}
+```{r time_series}
 steps_per_interval <- aggregate(steps ~ interval, activity, mean, na.rm=T)
 with(steps_per_interval, plot(interval, steps, type="l", xlab="5- min Intervals", ylab="Avg steps across all days", main = "Average daily activity pattern"))
 ```
@@ -92,7 +92,7 @@ Sys.setlocale("LC_ALL","English")
 ```
 
 
-```{r panel plots}
+```{r panel_plots}
 complete_activity$day <- as.factor(weekdays(as.Date(complete_activity$date)))
 for (i in 1:17568){
     complete_activity$wd[i] <- if (complete_activity$day[i] == "Saturday" || complete_activity$day[i] == "Sunday") {"Weekend"} else {"Weekday"}
